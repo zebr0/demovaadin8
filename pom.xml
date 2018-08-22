@@ -4,8 +4,8 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>fr.mazerty</groupId>
-    <artifactId>torii</artifactId>
+    <groupId>org.zebr0</groupId>
+    <artifactId>demovaadin8</artifactId>
     <version>current</version>
 
     <packaging>war</packaging>
@@ -120,7 +120,7 @@
                     <driver>org.postgresql.Driver</driver>
                     <url>${database.url}</url>
                     <user>${database.username}</user>
-                    <schemas>torii</schemas>
+                    <schemas>demovaadin8</schemas>
                     <locations>
                         <location>filesystem:src/main/sql</location>
                     </locations>
@@ -150,10 +150,10 @@
                             <name>org.jooq.meta.postgres.PostgresDatabase</name>
                             <includes>.*</includes>
                             <excludes>flyway_schema_history</excludes>
-                            <inputSchema>torii</inputSchema>
+                            <inputSchema>demovaadin8</inputSchema>
                         </database>
                         <target>
-                            <packageName>fr.mazerty.torii.dao.jooq</packageName>
+                            <packageName>org.zebr0.demovaadin8.dao.jooq</packageName>
                             <directory>src/main/java</directory>
                         </target>
                     </generator>
