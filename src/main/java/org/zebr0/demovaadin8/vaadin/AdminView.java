@@ -37,7 +37,7 @@ public class AdminView extends MyView {
         Button add = new Button(lp.l("add"));
 
         grid = new Grid<>();
-        grid.addColumn(User::getEmail).setCaption(lp.l("user.email.caption"));
+        grid.addColumn(User::getUsername).setCaption(lp.l("user.username.caption"));
         grid.addColumn(User::getAdmin).setCaption(lp.l("user.admin.caption"));
 
         HorizontalLayout horizontalLayout = new HorizontalLayout(back, grid, add);

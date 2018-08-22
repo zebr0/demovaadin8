@@ -27,7 +27,7 @@ import org.zebr0.demovaadin8.dao.jooq.tables.TUser;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TUserRecord extends UpdatableRecordImpl<TUserRecord> implements Record4<Integer, String, String, Boolean> {
 
-    private static final long serialVersionUID = 1955106658;
+    private static final long serialVersionUID = 577524196;
 
     /**
      * Setter for <code>demovaadin8.t_user.id</code>.
@@ -44,16 +44,16 @@ public class TUserRecord extends UpdatableRecordImpl<TUserRecord> implements Rec
     }
 
     /**
-     * Setter for <code>demovaadin8.t_user.email</code>.
+     * Setter for <code>demovaadin8.t_user.username</code>.
      */
-    public void setEmail(String value) {
+    public void setUsername(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>demovaadin8.t_user.email</code>.
+     * Getter for <code>demovaadin8.t_user.username</code>.
      */
-    public String getEmail() {
+    public String getUsername() {
         return (String) get(1);
     }
 
@@ -130,7 +130,7 @@ public class TUserRecord extends UpdatableRecordImpl<TUserRecord> implements Rec
      */
     @Override
     public Field<String> field2() {
-        return TUser.T_USER.EMAIL;
+        return TUser.T_USER.USERNAME;
     }
 
     /**
@@ -162,7 +162,7 @@ public class TUserRecord extends UpdatableRecordImpl<TUserRecord> implements Rec
      */
     @Override
     public String component2() {
-        return getEmail();
+        return getUsername();
     }
 
     /**
@@ -194,7 +194,7 @@ public class TUserRecord extends UpdatableRecordImpl<TUserRecord> implements Rec
      */
     @Override
     public String value2() {
-        return getEmail();
+        return getUsername();
     }
 
     /**
@@ -227,7 +227,7 @@ public class TUserRecord extends UpdatableRecordImpl<TUserRecord> implements Rec
      */
     @Override
     public TUserRecord value2(String value) {
-        setEmail(value);
+        setUsername(value);
         return this;
     }
 
@@ -275,11 +275,11 @@ public class TUserRecord extends UpdatableRecordImpl<TUserRecord> implements Rec
     /**
      * Create a detached, initialised TUserRecord
      */
-    public TUserRecord(Integer id, String email, String password, Boolean admin) {
+    public TUserRecord(Integer id, String username, String password, Boolean admin) {
         super(TUser.T_USER);
 
         set(0, id);
-        set(1, email);
+        set(1, username);
         set(2, password);
         set(3, admin);
     }

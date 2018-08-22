@@ -7,12 +7,12 @@ import java.util.List;
 public interface UserDao {
 
     /**
-     * Returns all information pertaining to the user whose email is given as parameter, or null if no user has been found.
+     * Returns all information pertaining to the user whose username is given as parameter, or null if no user has been found.
      *
-     * @param email email to look for
-     * @return {@link User} instance corresponding to the given email, or null if no user has been found
+     * @param username username to look for
+     * @return {@link User} instance corresponding to the given username, or null if no user has been found
      */
-    User selectByEmail(String email);
+    User selectByUsername(String username);
 
     /**
      * @return {@link List} of all the {@link User}s in the database

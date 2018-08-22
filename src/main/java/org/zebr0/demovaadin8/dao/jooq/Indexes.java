@@ -29,15 +29,15 @@ public class Indexes {
     // INDEX definitions
     // -------------------------------------------------------------------------
 
-    public static final Index T_USER_EMAIL_KEY = Indexes0.T_USER_EMAIL_KEY;
     public static final Index T_USER_PKEY = Indexes0.T_USER_PKEY;
+    public static final Index T_USER_USERNAME_KEY = Indexes0.T_USER_USERNAME_KEY;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
     // -------------------------------------------------------------------------
 
     private static class Indexes0 {
-        public static Index T_USER_EMAIL_KEY = Internal.createIndex("t_user_email_key", TUser.T_USER, new OrderField[] { TUser.T_USER.EMAIL }, true);
         public static Index T_USER_PKEY = Internal.createIndex("t_user_pkey", TUser.T_USER, new OrderField[] { TUser.T_USER.ID }, true);
+        public static Index T_USER_USERNAME_KEY = Internal.createIndex("t_user_username_key", TUser.T_USER, new OrderField[] { TUser.T_USER.USERNAME }, true);
     }
 }

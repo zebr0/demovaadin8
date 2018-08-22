@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
         // jbcrypt doesn't handle null strings very well so...
         String userPassword = defaultString(user.getPassword());
 
-        User match = userDao.selectByEmail(user.getEmail());
+        User match = userDao.selectByUsername(user.getUsername());
         if (match == null) {
             // if no matching user has been found, we check the password against a dummy hash anyway so that there's no
             // significant difference in response time that can be used to guess existing users in the database

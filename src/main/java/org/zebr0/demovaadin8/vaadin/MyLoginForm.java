@@ -14,20 +14,20 @@ class MyLoginForm extends LoginForm {
     private LanguageProxy lp;
 
     private final Binder<User> binder = new Binder<>();
-    private final TextField email = new TextField();
+    private final TextField username = new TextField();
     private final PasswordField password = new PasswordField();
     private final Button login = new PrimaryButton();
 
     MyLoginForm(LanguageProxy lp) {
         this.lp = lp;
 
-        binder.forField(email).bind(User::getEmail, User::setEmail);
+        binder.forField(username).bind(User::getUsername, User::setUsername);
         binder.forField(password).bind(User::getPassword, User::setPassword);
     }
 
     @Override
     protected TextField createUsernameField() {
-        return email;
+        return username;
     }
 
     @Override
@@ -51,14 +51,14 @@ class MyLoginForm extends LoginForm {
 
     @Override
     public void focus() {
-        email.focus();
+        username.focus();
     }
 
     /**
      * Since the language can be changed while this form is displayed, we need a method to refresh the captions
      */
     void refreshCaptions() {
-        email.setCaption(lp.l("user.email.caption"));
+        username.setCaption(lp.l("user.username.caption"));
         password.setCaption(lp.l("user.password.caption"));
         login.setCaption(lp.l("loginform.button.caption"));
     }

@@ -12,9 +12,9 @@ import static org.zebr0.demovaadin8.dao.jooq.Tables.T_USER;
 public class JooqUserDao extends JooqDao implements UserDao {
 
     @Override
-    public User selectByEmail(String email) {
+    public User selectByUsername(String username) {
         return dslContext.selectFrom(T_USER)
-                .where(T_USER.EMAIL.equal(email))
+                .where(T_USER.USERNAME.equal(username))
                 .fetchAnyInto(User.class);
     }
 

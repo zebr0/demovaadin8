@@ -38,7 +38,7 @@ public class Keys {
     // -------------------------------------------------------------------------
 
     public static final UniqueKey<TUserRecord> T_USER_PKEY = UniqueKeys0.T_USER_PKEY;
-    public static final UniqueKey<TUserRecord> T_USER_EMAIL_KEY = UniqueKeys0.T_USER_EMAIL_KEY;
+    public static final UniqueKey<TUserRecord> T_USER_USERNAME_KEY = UniqueKeys0.T_USER_USERNAME_KEY;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
@@ -55,6 +55,6 @@ public class Keys {
 
     private static class UniqueKeys0 {
         public static final UniqueKey<TUserRecord> T_USER_PKEY = Internal.createUniqueKey(TUser.T_USER, "t_user_pkey", TUser.T_USER.ID);
-        public static final UniqueKey<TUserRecord> T_USER_EMAIL_KEY = Internal.createUniqueKey(TUser.T_USER, "t_user_email_key", TUser.T_USER.EMAIL);
+        public static final UniqueKey<TUserRecord> T_USER_USERNAME_KEY = Internal.createUniqueKey(TUser.T_USER, "t_user_username_key", TUser.T_USER.USERNAME);
     }
 }

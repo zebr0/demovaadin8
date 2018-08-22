@@ -40,7 +40,7 @@ import org.zebr0.demovaadin8.dao.jooq.tables.records.TUserRecord;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TUser extends TableImpl<TUserRecord> {
 
-    private static final long serialVersionUID = -720894028;
+    private static final long serialVersionUID = 2089043918;
 
     /**
      * The reference instance of <code>demovaadin8.t_user</code>
@@ -61,9 +61,9 @@ public class TUser extends TableImpl<TUserRecord> {
     public final TableField<TUserRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.field("nextval('demovaadin8.t_user_id_seq'::regclass)", org.jooq.impl.SQLDataType.INTEGER)), this, "");
 
     /**
-     * The column <code>demovaadin8.t_user.email</code>.
+     * The column <code>demovaadin8.t_user.username</code>.
      */
-    public final TableField<TUserRecord, String> EMAIL = createField("email", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
+    public final TableField<TUserRecord, String> USERNAME = createField("username", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
      * The column <code>demovaadin8.t_user.password</code>.
@@ -121,7 +121,7 @@ public class TUser extends TableImpl<TUserRecord> {
      */
     @Override
     public List<Index> getIndexes() {
-        return Arrays.<Index>asList(Indexes.T_USER_EMAIL_KEY, Indexes.T_USER_PKEY);
+        return Arrays.<Index>asList(Indexes.T_USER_PKEY, Indexes.T_USER_USERNAME_KEY);
     }
 
     /**
@@ -145,7 +145,7 @@ public class TUser extends TableImpl<TUserRecord> {
      */
     @Override
     public List<UniqueKey<TUserRecord>> getKeys() {
-        return Arrays.<UniqueKey<TUserRecord>>asList(Keys.T_USER_PKEY, Keys.T_USER_EMAIL_KEY);
+        return Arrays.<UniqueKey<TUserRecord>>asList(Keys.T_USER_PKEY, Keys.T_USER_USERNAME_KEY);
     }
 
     /**
