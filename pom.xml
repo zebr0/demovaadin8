@@ -17,8 +17,8 @@
 
         <javaee.api.version>8.0</javaee.api.version>
         <vaadin.version>8.5.1</vaadin.version>
-        <vaadin.viritin.version>2.6</vaadin.viritin.version>
         <vaadin.cdi.version>3.0.1</vaadin.cdi.version>
+        <vaadin.viritin.version>2.6</vaadin.viritin.version>
         <jooq.version>3.11.4</jooq.version>
         <commons.lang3.version>3.7</commons.lang3.version>
         <jbcrypt.version>0.4.1</jbcrypt.version>
