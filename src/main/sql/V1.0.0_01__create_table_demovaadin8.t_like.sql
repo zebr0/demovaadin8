@@ -1,0 +1,3 @@
+CREATE TABLE demovaadin8.t_like (
+  timestamp TIMESTAMP PRIMARY KEY DEFAULT CURRENT_TIMESTAMP
+);
