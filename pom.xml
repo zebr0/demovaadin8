@@ -129,7 +129,6 @@
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>${wildfly.version}</version>
                 <configuration>
-                    <hostname>wildfly</hostname>
                     <username>admin</username>
                     <password>admin</password>
                 </configuration>
