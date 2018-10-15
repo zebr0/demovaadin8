@@ -131,7 +131,7 @@
                 <configuration>
                     <username>admin</username>
                     <password>admin</password>
-                    <name>${project.build.finalName}.war</name>
+                    <name>${project.artifactId}.war</name>
                 </configuration>
                 <executions>
                     <execution>
