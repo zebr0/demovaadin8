@@ -28,7 +28,7 @@
         <flyway.version>5.1.4</flyway.version>
         <postgresql.jdbc.version>42.2.4</postgresql.jdbc.version>
 
-        <database.url>jdbc:postgresql://postgresql:5432/postgres</database.url>
+        <database.url>jdbc:postgresql://localhost:5432/postgres</database.url>
         <database.username>postgres</database.username>
     </properties>
 
